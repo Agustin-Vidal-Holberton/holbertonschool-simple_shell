@@ -1,0 +1,41 @@
+.TH hsh 1 "Abril 2025" "v1.0" "Manual del Shell"
+.SH NOMBRE
+hsh \- Shell simple personalizado en C
+
+.SH SINOPSIS
+.B hsh
+[\fIarchivo\fR]
+
+.SH DESCRIPCION
+\fBhsh\fR es una implementación sncilla de un shell que interpreta comandos, 
+similar a /bin/sh. Puede ejecutarse en modo interactivo y no interactivo.
+
+.SH OPCIONES
+No recibe opciones. Lee comandos desde la entrada estándar o desde un archivo.
+
+.SH FUNCIONALIDADES
+.TP
+Ejecuta comandos mediante el PATH
+.TP
+Manejo de procesos con fork, execve y wait
+.TP
+Manejo básico de errores
+
+.SH EJEMPLOS
+Interactivo:
+.EX
+$ ./hsh
+($) ls -l
+.EE
+
+No interactivo:
+.EX
+$ echo "ls -l" | ./hsh
+.EE
+
+.SH AUTORES
+Ver archivo AUTHORS
+
+.SH LICENCIA
+Uso educativo. 
+
